@@ -1,0 +1,15 @@
+i=imread('color.jpg');
+img1=rgb2gray(i);
+red=i(:,:,1);
+green=i(:,:,2);
+blue=i(:,:,3);
+img2=(red+blue+green)/3;
+img3=(red*0.59+green*(.3)+blue*(0.11));
+subplot(2,2,1)
+imshow(i);
+subplot(2,2,2)
+imshow(uint8(img1));
+subplot(2,2,3)
+imshow(unit8(img2));
+subplot(2,2,4)
+imshow(uint8(img3));
